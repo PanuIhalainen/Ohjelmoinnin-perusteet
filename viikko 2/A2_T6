@@ -1,0 +1,25 @@
+def get_hex_color():
+    while True:
+        color = input("Insert a hex color (e.g. #FFA500): ").strip()
+        if len(color) == 7 and color.startswith("#"):
+            return color.upper()
+        print("Invalid format. Please enter a 7-character hex code starting with '#'.")
+
+def main():
+    print("Program starting.\n")
+
+    hex_color = get_hex_color()
+
+    red = hex_color[1:3]
+    green = hex_color[3:5]
+    blue = hex_color[5:7]
+
+    print("Colors")
+    print(f"- Red   {red}")
+    print(f"- Green {green}")
+    print(f"- Blue  {blue}")
+
+    print("\nProgram ending.")
+
+if __name__ == "__main__":
+    main()

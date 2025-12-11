@@ -1,0 +1,65 @@
+def length_menu():
+    while True:
+        print("\nLength options:")
+        print("1 -- Meters to kilometers")
+        print("2 -- Kilometers to meters")
+        print("0 -- Exit")
+        sub_choice = input("Your choice: ")
+
+        if sub_choice == "1":
+            meters = float(input("Insert meters: "))
+            km = round(meters / 1000, 1)
+            print(f"{meters} m is {km} km")
+        elif sub_choice == "2":
+            km = float(input("Insert kilometers: "))
+            meters = round(km * 1000, 1)
+            print(f"{km} km is {meters} m")
+        elif sub_choice == "0":
+            break
+        else:
+            print("Unknown option.")
+
+def weight_menu():
+    while True:
+        print("\nWeight options:")
+        print("1 -- Grams to pounds")
+        print("2 -- Pounds to grams")
+        print("0 -- Exit")
+        sub_choice = input("Your choice: ")
+
+        if sub_choice == "1":
+            grams = float(input("Insert grams: "))
+            pounds = round(grams / 453.592, 1)
+            print(f"{grams} g is {pounds} lbs")
+        elif sub_choice == "2":
+            pounds = float(input("Insert pounds: "))
+            grams = round(pounds * 453.592, 1)
+            print(f"{pounds} lbs is {grams} g")
+        elif sub_choice == "0":
+            break
+        else:
+            print("Unknown option.")
+
+# Pääohjelma
+print("Program starting.")
+print("Welcome to the unit converter program!")
+print("Follow the menu instructions below.")
+
+while True:
+    print("\nOptions:")
+    print("1 -- Length")
+    print("2 -- Weight")
+    print("0 -- Exit")
+    choice = input("Your choice: ")
+
+    if choice == "1":
+        length_menu()
+    elif choice == "2":
+        weight_menu()
+    elif choice == "0":
+        print("Exiting...")
+        break
+    else:
+        print("Unknown option.")
+
+print("\nProgram ending.")

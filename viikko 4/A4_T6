@@ -1,0 +1,25 @@
+def collatz_sequence(n):
+    steps = 0
+    print(n, end="")
+
+    while n != 1:
+        if n % 2 == 0:
+            n = n // 2
+        else:
+            n = 3 * n + 1
+        print(" ->", n, end="")
+        steps += 1
+
+    return steps
+
+# Pääohjelma
+print("Program starting.")
+num = int(input("Insert a positive integer: "))
+
+if num > 0:
+    total_steps = collatz_sequence(num)
+    print(f"\nSequence had {total_steps} total steps.")
+else:
+    print("Please insert a positive integer.")
+
+print("Program ending.")
